@@ -4,12 +4,12 @@ A simple and user-friendly Todo List application built with **React** and **Cont
 
 ## Features
 
-- Add new todos
-- Edit existing todos
-- Delete todos
-- Manage state using Context API
-- Save todos in localStorage
-- Persistent data after page refresh
+- Add new todos.
+- Edit existing todos.
+- Delete todos.
+- Manage state using Context API.
+- Save todos in localStorage.
+- Persistent data after page refresh.
 
 ## Tech Stack
 
