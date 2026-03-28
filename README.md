@@ -13,10 +13,10 @@ A simple and user-friendly Todo List application built with **React** and **Cont
 
 ## Tech Stack
 
-- React
-- Context API
-- JavaScript
-- localStorage
+- React.
+- Context API.
+- JavaScript.
+- localStorage.
 
 ## Description
 
