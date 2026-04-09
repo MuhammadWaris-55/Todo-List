@@ -6,23 +6,26 @@ import TodoItem from './components/TodoItem'
 
 function App() {
 
-  const [todos, setTodos] = useState([])
+// Todo list state
+const [todos, setTodos] = useState([])
 
-  const addTodo = (todo) => {
-    setTodos((prev) => [...prev, { id: Date.now(), ...todo }])
-  }
+const addTodo = (todo) => {
+  setTodos((prev) => [...prev, { id: Date.now(), ...todo }])
+}
 
-  const updateTodo = (id, todo) => {
-    setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo)))
-  }
+const updateTodo = (id, todo) => {
+  // Replace matching todo by id, keep others unchanged
+  setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo)))
+}
 
-  const deleteTodo = (id) => {
-    setTodos((prev) => prev.filter((todo) => todo.id !== id))
-  }
+const deleteTodo = (id) => {
+  setTodos((prev) => prev.filter((todo) => todo.id !== id))
+}
 
-  const toggleComplete = (id) => {
-    setTodos((prev) => prev.map((prevTodo) => prevTodo.id === id ? { ...prevTodo, completed: !prevTodo.completed } : prevTodo))
-  }
+// Toggle the completed status of a todo
+const toggleComplete = (id) => {
+  setTodos((prev) => prev.map((prevTodo) => prevTodo.id === id ? { ...prevTodo, completed: !prevTodo.completed } : prevTodo))
+}
 
   useEffect(() => {
     const todos = JSON.parse(localStorage.getItem("todos"))
